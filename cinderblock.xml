@@ -7,13 +7,12 @@
 	summary="Configuration file loader and saver."
 	url="https://github.com/dawidgorny/Cinder-Config"
 	>
-	<supports os="macosx" />
+
 	<header>include/CinderConfig.h</header>
 	<source>src/CinderConfig.cpp</source>
 	<includePath>include</includePath>
 	<includePath system="true">include</includePath>
-	<platform os="macosx">
-	</platform>
+
 </block>
 <template>templates/Config/template.xml</template>
 </cinder>
