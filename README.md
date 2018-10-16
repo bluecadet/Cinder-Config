@@ -24,3 +24,7 @@ Usage example
     mConfig->load( getAppPath() / fs::path("config.xml") );
 
 See sample in samples directory.
+
+## Things to note
+1. If the 
+
