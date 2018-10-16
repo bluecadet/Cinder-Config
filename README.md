@@ -26,5 +26,6 @@ Usage example
 See sample in samples directory.
 
 ## Things to note
-1. If the 
-
+1. You make want to break your app's `setup()` into 2 functions: The first one to define the params, a second one (e.g. `postParamLoadingSetup()` to be called after calling `mConfig->load()` to do anything that depends on saved param values.
+2. When using Cinder's param, be sure to make param names (the first argument of `addParam()`) unique accorss the app, even if you put params into groups, since that Cinder-Config only use params' names when saving them.
+3. After a new param being added, `mConfig->load()` will fail if it can't find the param in the XML, and all params to be loaded after the new one will not load. To fix the problem, manually add the corresponding entry to the XML. You can also call `mConfig->save()`; copy the new lines from the XML; discard changes in the file (because many other param values will be overwritten to default), and paste the changes back.
